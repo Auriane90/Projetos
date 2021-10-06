@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SDI-Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+    <link href="{% static 'paginas/Mdb/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'paginas/Mdb/css/mdb.min.css' %}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{% static 'paginas/Mdb/css/style.css' %}" rel="stylesheet">
+
+    <!-- scripts mdb -->
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="{% static 'paginas/Mdb/js/jquery-3.3.1.min.js' %}"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{% static 'paginas/Mdb/js/popper.min.js' %}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{% static 'paginas/Mdb/js/bootstrap.min.js'}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{% static 'paginas/Mdb/js/mdb.js'%}"></script>
+</head>
+
+<body style="padding: 50px;">
+
+    <!-- Default form login -->
+    <center>
+        <form class="text-center border border-light p-5" method="post" style="width: 500px;">
+            {% csrf_token %}
+
+            <p class="h4 mb-4">Login</p>
+
+            <!-- Email -->
+            <input type="text" name="username" class="form-control mb-4" placeholder="Nome">
+
+            <!-- Password -->
+            <input type="password" name="password" class="form-control mb-4" placeholder="Password">
+
+            <div class="d-flex justify-content-around">
+                <div>
+                    <!-- Remember me -->
+
+                </div>
+            </div>
+
+            <!-- Sign in button -->
+            <button class="btn btn-info btn-block my-4" type="submit">Login</button>
+
+
+            <!-- Social register -->
+            <p>ou inscreva-se com:</p>
+
+            <a type="button" class="btn-floating btn-fb btn-sm">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a type="button" class="btn-floating btn-tw btn-sm">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a type="button" class="btn-floating btn-li btn-sm">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a type="button" class="btn-floating btn-git btn-sm">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <hr>
+        </form>
+    </center>
+    <!-- Default form login -->
+
+</body>
+
+</html>

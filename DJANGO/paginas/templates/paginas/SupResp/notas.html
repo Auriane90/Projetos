@@ -1,0 +1,526 @@
+{% extends "paginas/SupResp/corpo.html" %}
+
+{% block title %}SDI-Notas{% endblock %}
+
+{% block conteudo %}
+<br><br><center><h1>Notas</h1></center>
+<!-- Grid row -->
+<div class="row accordion-gradient-bcg d-flex justify-content-center">
+
+  <!-- Grid column -->
+  <div class="col-md-10 col-xl-6 py-5">
+
+    <!--Accordion wrapper-->
+    <div class="accordion md-accordion accordion-2" id="accordionEx7" role="tablist"
+      aria-multiselectable="true">
+{% for n in teste %}
+    {% for a in n %}
+      <!-- Accordion card -->
+      <div class="card">
+
+        <!-- Card header -->
+        <div class="card-header blue-grey darken-4 z-depth-1 mb-1" role="tab" id="heading{{a.idAluno}}">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx7" href="#collapse{{a.idAluno}}"
+            aria-expanded="false" aria-controls="collapse{{a.idAluno}}">
+            <h5 class="mb-0 white-text text-uppercase font-thin">
+              {{a.idAluno}} <i class="fas fa-angle-down rotate-icon"></i>
+            </h5>
+          </a>
+        </div>
+
+        <!-- Card body -->
+        <div id="collapse{{a.idAluno}}" class="collapse" role="tabpanel" aria-labelledby="heading{{a.idAluno}}"
+          data-parent="#accordionEx7">
+          <div class="card-body mb-1 rgba-grey-light text-dark">
+            <div class="container">
+
+
+                <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Diciplina</th>
+                      <th>1º Bimestral</th>
+                      <th>2º Bimestral</th>
+                      <th>3º Bimestral</th>
+                      <th>4º Bimestral</th>
+                      <th>Recuperação</th>
+                      <th>Média</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+
+
+
+                    <tr>
+                      <td>Portuquês</td>
+                      {% if a.PBPortuques == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.PBPortuques}}</td>
+                      {% endif %}
+                      {% if a.SBPortuques == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.SBPortuques}}</td>
+                      {% endif %}
+                      {% if a.TBPortuques == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.TBPortuques}}</td>
+                      {% endif %}
+                      {% if a.QBPortuques == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.QBPortuques}}</td>
+                      {% endif %}
+                      {% if a.RecPortuques == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.RecPortuques}}</td>
+                      {% endif %}
+                      {% if a.MPortuques == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.MPortuques}}</td>
+                      {% endif %}
+
+                    </tr>
+
+
+                    <tr>
+                      <td>Matemática</td>
+                      {% if a.PBMatematica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.PBMatematica}}</td>
+                      {% endif %}
+                      {% if a.SBMatematica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.SBMatematica}}</td>
+                      {% endif %}
+                      {% if a.TBMatematica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.TBMatematica}}</td>
+                      {% endif %}
+                      {% if a.QBMatematica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.QBMatematica}}</td>
+                      {% endif %}
+                      {% if a.RecMatematica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.RecMatematica}}</td>
+                      {% endif %}
+                      {% if a.MMatematica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.MMatematica}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Geografia</td>
+                      {% if a.PBGeografia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.PBGeografia}}</td>
+                      {% endif %}
+                      {% if a.SBGeografia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.SBGeografia}}</td>
+                      {% endif %}
+                      {% if a.TBGeografia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.TBGeografia}}</td>
+                      {% endif %}
+                      {% if a.QBGeografia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.QBGeografia}}</td>
+                      {% endif %}
+                      {% if a.RecGeografia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.RecGeografia}}</td>
+                      {% endif %}
+                      {% if a.MGeografia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.MGeografia}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>História</td>
+                      {% if a.PBHistoria == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.PBHistoria}}</td>
+                      {% endif %}
+                      {% if a.SBHistoria == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.SBHistoria}}</td>
+                      {% endif %}
+                      {% if a.TBHistoria == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.TBHistoria}}</td>
+                      {% endif %}
+                      {% if a.QBHistoria == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.QBHistoria}}</td>
+                      {% endif %}
+                      {% if a.RecHistoria == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.RecHistoria}}</td>
+                      {% endif %}
+                      {% if a.MHistoria == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.MHistoria}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Biologia</td>
+                      {% if a.PBBiologia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.PBBiologia}}</td>
+                      {% endif %}
+                      {% if a.SBBiologia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.SBBiologia}}</td>
+                      {% endif %}
+                      {% if a.TBBiologia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.TBBiologia}}</td>
+                      {% endif %}
+                      {% if a.QBBiologia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.QBBiologia}}</td>
+                      {% endif %}
+                      {% if a.RecBiologia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.RecBiologia}}</td>
+                      {% endif %}
+                      {% if a.MBiologia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.MBiologia}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Quimica</td>
+                      {% if a.PBQuimica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.PBQuimica}}</td>
+                      {% endif %}
+                      {% if a.SBQuimica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.SBQuimica}}</td>
+                      {% endif %}
+                      {% if a.TBQuimica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.TBQuimica}}</td>
+                      {% endif %}
+                      {% if a.QBQuimica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.QBQuimica}}</td>
+                      {% endif %}
+                      {% if a.RecQuimica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.RecQuimica}}</td>
+                      {% endif %}
+                      {% if a.MQuimica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.MQuimica}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Física</td>
+                      {% if a.PBFisica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.PBFisica}}</td>
+                      {% endif %}
+                      {% if a.SBFisica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.SBFisica}}</td>
+                      {% endif %}
+                      {% if a.TBFisica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.TBFisica}}</td>
+                      {% endif %}
+                      {% if a.QBFisica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.QBFisica}}</td>
+                      {% endif %}
+                      {% if a.RecFisica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.RecFisica}}</td>
+                      {% endif %}
+                      {% if a.MFisica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.MFisica}}</td>
+                      {% endif %}
+                    </tr>
+
+
+                    <tr>
+                      <td>Filosofia</td>
+                      {% if a.PBFilosofia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.PBFilosofia}}</td>
+                      {% endif %}
+                      {% if a.SBFilosofia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.SBFilosofia}}</td>
+                      {% endif %}
+                      {% if a.TBFilosofia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.TBFilosofia}}</td>
+                      {% endif %}
+                      {% if a.QBFilosofia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.QBFilosofia}}</td>
+                      {% endif %}
+                      {% if a.RecFilosofia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.RecFilosofia}}</td>
+                      {% endif %}
+                      {% if a.MFilosofia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.MFilosofia}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Sociologia</td>
+                      {% if a.PBSociologia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.PBSociologia}}</td>
+                      {% endif %}
+                      {% if a.SBSociologia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.SBSociologia}}</td>
+                      {% endif %}
+                      {% if a.TBSociologia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.TBSociologia}}</td>
+                      {% endif %}
+                      {% if a.QBSociologia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.QBSociologia}}</td>
+                      {% endif %}
+                      {% if a.RecSociologia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.RecSociologia}}</td>
+                      {% endif %}
+                      {% if a.MSociologia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.MSociologia}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Filosofia</td>
+                      {% if a.PBFilosofia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.PBFilosofia}}</td>
+                      {% endif %}
+                      {% if a.SBFilosofia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.SBFilosofia}}</td>
+                      {% endif %}
+                      {% if a.TBFilosofia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.TBFilosofia}}</td>
+                      {% endif %}
+                      {% if a.QBFilosofia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.QBFilosofia}}</td>
+                      {% endif %}
+                      {% if a.RecFilosofia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.RecFilosofia}}</td>
+                      {% endif %}
+                      {% if a.MFilosofia == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.MFilosofia}}</td>
+                      {% endif %}
+                    </tr>
+
+
+                    <tr>
+                      <td>Ed.Física</td>
+                      {% if a.PBEdFisica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.PBEdFisica}}</td>
+                      {% endif %}
+                      {% if a.SBEdFisica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.SBEdFisica}}</td>
+                      {% endif %}
+                      {% if a.TBEdFisica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.TBEdFisica}}</td>
+                      {% endif %}
+                      {% if a.QBEdFisica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.QBEdFisica}}</td>
+                      {% endif %}
+                      {% if a.RecEdFisica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.RecEdFisica}}</td>
+                      {% endif %}
+                      {% if a.MEdFisica == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.MEdFisica}}</td>
+                      {% endif %}
+                    </tr>
+
+
+                    <tr>
+                      <td>Espanhol</td>
+                      {% if a.PBEspanhol == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.PBEspanhol}}</td>
+                      {% endif %}
+                      {% if a.SBEspanhol == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.SBEspanhol}}</td>
+                      {% endif %}
+                      {% if a.TBEspanhol == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.TBEspanhol}}</td>
+                      {% endif %}
+                      {% if a.QBEspanhol == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.QBEspanhol}}</td>
+                      {% endif %}
+                      {% if a.RecEspanhol == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.RecEspanhol}}</td>
+                      {% endif %}
+                      {% if a.MEspanhol == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.MEspanhol}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Inglês</td>
+                      {% if a.PBIngles == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.PBIngles}}</td>
+                      {% endif %}
+                      {% if a.SBIngles == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.SBIngles}}</td>
+                      {% endif %}
+                      {% if a.TBIngles == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.TBIngles}}</td>
+                      {% endif %}
+                      {% if a.QBIngles == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.QBIngles}}</td>
+                      {% endif %}
+                      {% if a.RecIngles == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.RecIngles}}</td>
+                      {% endif %}
+                      {% if a.MIngles == null %}
+                        <td>---</td>
+                      {% else %}
+                        <td>{{a.MIngles}}</td>
+                      {% endif %}
+                    </tr>
+
+
+
+                  </tbody>
+
+                </table>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </div>
+
+{% endfor %}
+{% endfor %}
+    </div>
+    <!--/.Accordion wrapper-->
+
+  </div>
+  <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+<br><br>
+{% endblock %}

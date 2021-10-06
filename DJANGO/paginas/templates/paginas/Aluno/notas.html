@@ -1,0 +1,518 @@
+{% extends "paginas/Aluno/corpo.html" %}
+
+{% block title %}SDI-Notas{% endblock %}
+
+{% block conteudo %}
+
+<!-- Button trigger modal -->
+
+
+<button type="button" class="btn aqua-gradient" data-toggle="modal" data-target="#myModal">
+Grafico
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+      </div>
+      <div class="modal-body">
+       <img src="data:image/png;base64,{{ gf|safe }}" class="img-fluid" alt="Responsive image">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  <br>
+
+
+<div class="container">
+
+
+<div class="table-responsive">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Diciplina</th>
+      <th>1º Bimestral</th>
+      <th>2º Bimestral</th>
+      <th>3º Bimestral</th>
+      <th>4º Bimestral</th>
+      <th>Recuperação</th>
+      <th>Média</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+
+
+    <tr>
+      <td>Portuquês</td>
+      {% for nota in notas %}
+      {% if nota.PBPortuques == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.PBPortuques}}</td>
+      {% endif %}
+      {% if nota.SBPortuques == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.SBPortuques}}</td>
+      {% endif %}
+      {% if nota.TBPortuques == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.TBPortuques}}</td>
+      {% endif %}
+      {% if nota.QBPortuques == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.QBPortuques}}</td>
+      {% endif %}
+      {% if nota.RecPortuques == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.RecPortuques}}</td>
+      {% endif %}
+      {% if nota.MPortuques == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.MPortuques}}</td>
+      {% endif %}
+
+    </tr>
+
+
+    <tr>
+      <td>Matemática</td>
+      {% if nota.PBMatematica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.PBMatematica}}</td>
+      {% endif %}
+      {% if nota.SBMatematica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.SBMatematica}}</td>
+      {% endif %}
+      {% if nota.TBMatematica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.TBMatematica}}</td>
+      {% endif %}
+      {% if nota.QBMatematica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.QBMatematica}}</td>
+      {% endif %}
+      {% if nota.RecMatematica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.RecMatematica}}</td>
+      {% endif %}
+      {% if nota.MMatematica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.MMatematica}}</td>
+      {% endif %}
+    </tr>
+
+    <tr>
+      <td>Geografia</td>
+      {% if nota.PBGeografia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.PBGeografia}}</td>
+      {% endif %}
+      {% if nota.SBGeografia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.SBGeografia}}</td>
+      {% endif %}
+      {% if nota.TBGeografia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.TBGeografia}}</td>
+      {% endif %}
+      {% if nota.QBGeografia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.QBGeografia}}</td>
+      {% endif %}
+      {% if nota.RecGeografia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.RecGeografia}}</td>
+      {% endif %}
+      {% if nota.MGeografia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.MGeografia}}</td>
+      {% endif %}
+    </tr>
+
+    <tr>
+      <td>História</td>
+      {% if nota.PBHistoria == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.PBHistoria}}</td>
+      {% endif %}
+      {% if nota.SBHistoria == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.SBHistoria}}</td>
+      {% endif %}
+      {% if nota.TBHistoria == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.TBHistoria}}</td>
+      {% endif %}
+      {% if nota.QBHistoria == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.QBHistoria}}</td>
+      {% endif %}
+      {% if nota.RecHistoria == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.RecHistoria}}</td>
+      {% endif %}
+      {% if nota.MHistoria == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.MHistoria}}</td>
+      {% endif %}
+    </tr>
+
+    <tr>
+      <td>Biologia</td>
+      {% if nota.PBBiologia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.PBBiologia}}</td>
+      {% endif %}
+      {% if nota.SBBiologia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.SBBiologia}}</td>
+      {% endif %}
+      {% if nota.TBBiologia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.TBBiologia}}</td>
+      {% endif %}
+      {% if nota.QBBiologia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.QBBiologia}}</td>
+      {% endif %}
+      {% if nota.RecBiologia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.RecBiologia}}</td>
+      {% endif %}
+      {% if nota.MBiologia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.MBiologia}}</td>
+      {% endif %}
+    </tr>
+
+    <tr>
+      <td>Quimica</td>
+      {% if nota.PBQuimica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.PBQuimica}}</td>
+      {% endif %}
+      {% if nota.SBQuimica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.SBQuimica}}</td>
+      {% endif %}
+      {% if nota.TBQuimica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.TBQuimica}}</td>
+      {% endif %}
+      {% if nota.QBQuimica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.QBQuimica}}</td>
+      {% endif %}
+      {% if nota.RecQuimica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.RecQuimica}}</td>
+      {% endif %}
+      {% if nota.MQuimica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.MQuimica}}</td>
+      {% endif %}
+    </tr>
+
+    <tr>
+      <td>Física</td>
+      {% if nota.PBFisica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.PBFisica}}</td>
+      {% endif %}
+      {% if nota.SBFisica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.SBFisica}}</td>
+      {% endif %}
+      {% if nota.TBFisica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.TBFisica}}</td>
+      {% endif %}
+      {% if nota.QBFisica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.QBFisica}}</td>
+      {% endif %}
+      {% if nota.RecFisica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.RecFisica}}</td>
+      {% endif %}
+      {% if nota.MFisica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.MFisica}}</td>
+      {% endif %}
+    </tr>
+
+
+    <tr>
+      <td>Filosofia</td>
+      {% if nota.PBFilosofia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.PBFilosofia}}</td>
+      {% endif %}
+      {% if nota.SBFilosofia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.SBFilosofia}}</td>
+      {% endif %}
+      {% if nota.TBFilosofia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.TBFilosofia}}</td>
+      {% endif %}
+      {% if nota.QBFilosofia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.QBFilosofia}}</td>
+      {% endif %}
+      {% if nota.RecFilosofia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.RecFilosofia}}</td>
+      {% endif %}
+      {% if nota.MFilosofia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.MFilosofia}}</td>
+      {% endif %}
+    </tr>
+
+    <tr>
+      <td>Sociologia</td>
+      {% if nota.PBSociologia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.PBSociologia}}</td>
+      {% endif %}
+      {% if nota.SBSociologia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.SBSociologia}}</td>
+      {% endif %}
+      {% if nota.TBSociologia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.TBSociologia}}</td>
+      {% endif %}
+      {% if nota.QBSociologia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.QBSociologia}}</td>
+      {% endif %}
+      {% if nota.RecSociologia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.RecSociologia}}</td>
+      {% endif %}
+      {% if nota.MSociologia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.MSociologia}}</td>
+      {% endif %}
+    </tr>
+
+    <tr>
+      <td>Filosofia</td>
+      {% if nota.PBFilosofia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.PBFilosofia}}</td>
+      {% endif %}
+      {% if nota.SBFilosofia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.SBFilosofia}}</td>
+      {% endif %}
+      {% if nota.TBFilosofia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.TBFilosofia}}</td>
+      {% endif %}
+      {% if nota.QBFilosofia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.QBFilosofia}}</td>
+      {% endif %}
+      {% if nota.RecFilosofia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.RecFilosofia}}</td>
+      {% endif %}
+      {% if nota.MFilosofia == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.MFilosofia}}</td>
+      {% endif %}
+    </tr>
+
+
+    <tr>
+      <td>Ed.Física</td>
+      {% if nota.PBEdFisica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.PBEdFisica}}</td>
+      {% endif %}
+      {% if nota.SBEdFisica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.SBEdFisica}}</td>
+      {% endif %}
+      {% if nota.TBEdFisica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.TBEdFisica}}</td>
+      {% endif %}
+      {% if nota.QBEdFisica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.QBEdFisica}}</td>
+      {% endif %}
+      {% if nota.RecEdFisica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.RecEdFisica}}</td>
+      {% endif %}
+      {% if nota.MEdFisica == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.MEdFisica}}</td>
+      {% endif %}
+    </tr>
+
+
+    <tr>
+      <td>Espanhol</td>
+      {% if nota.PBEspanhol == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.PBEspanhol}}</td>
+      {% endif %}
+      {% if nota.SBEspanhol == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.SBEspanhol}}</td>
+      {% endif %}
+      {% if nota.TBEspanhol == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.TBEspanhol}}</td>
+      {% endif %}
+      {% if nota.QBEspanhol == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.QBEspanhol}}</td>
+      {% endif %}
+      {% if nota.RecEspanhol == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.RecEspanhol}}</td>
+      {% endif %}
+      {% if nota.MEspanhol == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.MEspanhol}}</td>
+      {% endif %}
+    </tr>
+
+    <tr>
+      <td>Inglês</td>
+      {% if nota.PBIngles == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.PBIngles}}</td>
+      {% endif %}
+      {% if nota.SBIngles == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.SBIngles}}</td>
+      {% endif %}
+      {% if nota.TBIngles == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.TBIngles}}</td>
+      {% endif %}
+      {% if nota.QBIngles == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.QBIngles}}</td>
+      {% endif %}
+      {% if nota.RecIngles == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.RecIngles}}</td>
+      {% endif %}
+      {% if nota.MIngles == null %}
+        <td>---</td>
+      {% else %}
+        <td>{{nota.MIngles}}</td>
+      {% endif %}
+      {% endfor %}
+    </tr>
+
+
+
+  </tbody>
+
+</table>
+    </div>
+  </div>
+
+
+
+
+{% endblock %}

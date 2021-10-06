@@ -1,0 +1,145 @@
+{% extends "paginas/Cadastro/corpoCadastro.html" %}
+
+{% block title %}SDI-Cadastro{% endblock %}
+
+{% block conteudo %}
+
+
+<center><h1>Cadastro de advertencias</h1></center>
+    <form method="post" action="{% url 'cdNotas' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group col-sm-4">
+      <label id="lb-shift">Course</label>
+      <select id="p-shift" class="form-control" name="turma">
+        <option selected disabled>Turma</option>
+        <option value="1A">1A</option>
+        <option value="1B">1B</option>
+        <option value="1C">1C</option>
+        <option value="1D">1D</option>
+        <option value="2A">2A</option>
+        <option value="2B">2B</option>
+        <option value="2C">2C</option>
+        <option value="2D">2D</option>
+        <option value="3A">3A</option>
+        <option value="3B">3B</option>
+        <option value="3C">3C</option>
+        <option value="3D">3D</option>
+       </select>
+    </div>
+    <div class="form-group col-sm-4">
+      <label id="lb-shift">Aluno</label>
+      <select id="t-shift" class="form-control" name="idAluno">
+        <option selected disabled>Selecione</option>
+        {% for a in alunos %}
+        <option data-course="{{a.first_name}}" value="{{a.id}}">{{a.username}}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+        <label>Notas</label>
+        <h3>Fisica</h3>
+        {{form.PBFisica}}
+        {{form.SBFisica}}
+        {{form.TBFisica}}
+        {{form.QBFisica}}
+        {{form.RecFisica}}
+        {{form.MFisica}}
+        <h3>Historia</h3>
+
+        {{form.PBHistoria}}
+        {{form.SBHistoria}}
+        {{form.TBHistoria}}
+        {{form.QBHistoria}}
+        {{form.RecHistoria}}
+        {{form.MHistoria}}
+        <h3>Biologia</h3>
+
+        {{form.PBBiologia}}
+        {{form.SBBiologia}}
+        {{form.TBBiologia}}
+        {{form.QBBiologia}}
+        {{form.RecBiologia}}
+        {{form.MBiologia}}
+        <h3>Filosofia</h3>
+
+        {{form.PBFilosofia}}
+        {{form.SBFilosofia}}
+        {{form.TBFilosofia}}
+        {{form.QBFilosofia}}
+        {{form.RecFilosofia}}
+        {{form.MFilosofia}}
+        <h3>Geografia</h3>
+
+        {{form.PBGeografia}}
+        {{form.SBGeografia}}
+        {{form.TBGeografia}}
+        {{form.QBGeografia}}
+        {{form.RecGeografia}}
+        {{form.MGeografia}}
+        <h3>Portuques</h3>
+
+        {{form.PBPortuques}}
+        {{form.SBPortuques}}
+        {{form.TBPortuques}}
+        {{form.QBPortuques}}
+        {{form.RecPortuques}}
+        {{form.MPortuques}}
+        <h3>Matematica</h3>
+
+        {{form.PBMatematica}}
+        {{form.SBMatematica}}
+        {{form.TBMatematica}}
+        {{form.QBMatematica}}
+        {{form.RecMatematica}}
+        {{form.MMatematica}}
+        <h3>Educação Fisica</h3>
+
+        {{form.PBEdFisica}}
+        {{form.SBEdFisica}}
+        {{form.TBEdFisica}}
+        {{form.QBEdFisica}}
+        {{form.RecEdFisica}}
+        {{form.MEdFisica}}
+        <h3>Espanhol</h3>
+
+        {{form.PBEspanhol}}
+        {{form.SBEspanhol}}
+        {{form.TBEspanhol}}
+        {{form.QBEspanhol}}
+        {{form.RecEspanhol}}
+        {{form.MEspanhol}}
+        <h3>Ingles</h3>
+
+        {{form.PBIngles}}
+        {{form.SBIngles}}
+        {{form.TBIngles}}
+        {{form.QBIngles}}
+        {{form.RecIngles}}
+        {{form.MIngles}}
+        <h3>Quimica</h3>
+
+        {{form.PBQuimica}}
+        {{form.SBQuimica}}
+        {{form.TBQuimica}}
+        {{form.QBQuimica}}
+        {{form.RecQuimica}}
+        {{form.MQuimica}}
+        <h3>Sociologia</h3>
+
+        {{form.PBSociologia}}
+        {{form.SBSociologia}}
+        {{form.TBSociologia}}
+        {{form.QBSociologia}}
+        {{form.RecSociologia}}
+        {{form.MSociologia}}
+
+
+
+
+
+
+
+        <input type="submit" value="Cadastrar">
+    </form>
+
+{% endblock %}

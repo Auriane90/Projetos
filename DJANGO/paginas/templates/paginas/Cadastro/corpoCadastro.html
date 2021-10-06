@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %} {% endblock %}
+        </title>
+        <meta charset="utf-8">
+        {% load static %}
+
+
+	<link rel="stylesheet" type="text/css" href="{% static 'paginas/css/bootstrap.min.css' %}"  />
+
+    <script type="text/javascript" src="{% static 'paginas/js/jquery-3.3.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'paginas/js/bootstrap.min.js' %}"></script>
+
+<!-- apartir daqui vai o mdb -->
+
+      <!-- Bootstrap core CSS -->
+
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+  <link href="{% static 'paginas/Mdb/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{% static 'paginas/Mdb/css/mdb.min.css' %}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{% static 'paginas/Mdb/css/style.css' %}" rel="stylesheet">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+      <!-- scripts mdb -->
+      <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{% static 'paginas/Mdb/js/jquery-3.3.1.min.js' %}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'paginas/Mdb/js/popper.min.js' %}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'paginas/Mdb/js/bootstrap.min.js'}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'paginas/Mdb/js/mdb.js'%}"></script>
+
+
+    </head>
+    <body>
+
+
+
+{%  block conteudo %}{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+    </body>

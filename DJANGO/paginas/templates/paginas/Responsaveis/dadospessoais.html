@@ -1,0 +1,46 @@
+{% extends "paginas/Responsaveis/corpoR.html" %} {% block title %}SDI-Dados Pessoais{% endblock %} {% block conteudo %}
+
+<center>
+    <div class="card" style="width: 18rem;">
+        {%for dado in dados%}
+        <img src="{{dado.Foto.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Dados Pessoais</h5>
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Nome: {{dado.Nome}}</li>
+            <li class="list-group-item">Telefone: {{dado.Telefone}}</li>
+            <li class="list-group-item">Rg: {{dado.RG}}</li>
+            <li class="list-group-item">Cpf: {{dado.CPF}}</li>
+            <li class="list-group-item">Idade: {{dado.Idade}}</li>
+            <li class="list-group-item">Serie: {{dado.Serie}}</li>
+            <li class="list-group-item">Rg: {{dado.RG}}</li>
+            <li class="list-group-item">Cpf: {{dado.CPF}}</li>
+            <li class="list-group-item">Nome Responsável: {{dado.NomeResponsavel}}</li>
+            <li class="list-group-item">Cpf Responsavel: {{dado.CPF_Responsavel}}</li>
+            <li class="list-group-item">Rg Responsavel: {{dado.RG_Responsavel}}</li>
+            <li class="list-group-item">Serie: {{dado.Serie}}</li>
+            {% endfor %}
+
+        </ul>
+        <!--  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> -->
+    </div>
+
+
+
+
+
+
+    </div>
+    <div class="col-md-4">
+    </div>
+    </div>
+    </div>
+</center>
+
+
+<br> {% endblock %}

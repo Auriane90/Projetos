@@ -1,0 +1,47 @@
+{% extends "paginas/Cadastro/corpoCadastro.html" %}
+
+{% block title %}SDI-Cadastro{% endblock %}
+
+{% block conteudo %}
+<script type="text/javascript">
+		$(function () {
+
+		  // Oculta as opções do segundo select:
+		  $("#t-shift option").hide();
+
+		  // Observa o evento change do primeiro select:
+		  $("#p-shift").on("change", function () {
+
+		    // Recupera o valor selecionado:
+		    let course = $("#p-shift").val();
+
+		    // Oculta as opções atuais:
+		    $("#t-shift option").hide();
+
+		    // Exibe as opções conforme a seleção:
+		    $("#t-shift option[data-course="+ course +"]").show();
+
+		  });
+
+		});
+	</script>
+
+    <center><h1>Cadastro de responsável</h1></center>
+<form method="post">
+    {% csrf_token %}
+
+        <label>Nome: </label>
+        {{form.nome}}
+        <label>Senha: </label>
+        {{form.senha}}
+        <label>Turma: </label>
+        {{form.turma}}
+        <label>Nome Aluno: </label>
+        {{form.nome_aluno}}
+        <label>Matricula do Aluno: </label>
+        {{form.matricula_aluno}}
+
+        <input type="submit" value="Cadastrar">
+</form>
+
+{% endblock %}

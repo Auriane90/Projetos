@@ -1,0 +1,942 @@
+{% extends "paginas/Responsaveis/corpoR.html" %} {% block title %}SDI-Frequencia{% endblock %} {% block conteudo %}
+
+<div class="container">
+
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Diciplina</th>
+                    <th>Janeiro</th>
+                    <th>Fevereiro</th>
+                    <th>Março</th>
+                    <th>Abril</th>
+                    <th>Maio</th>
+                    <th>Junho</th>
+                    <th>Julho</th>
+                    <th>Agosto</th>
+                    <th>Setembro</th>
+                    <th>Outubro</th>
+                    <th>Novembro</th>
+                    <th>Dezembro</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {% for chamada in chamadas %}
+                    <td>Port.Básico</td>
+                    {% if chamada.JaneiroPB == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroPB}}</td>
+                    {% endif %} {% if chamada.FevereiroPB == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroPB}}</td>
+                    {% endif %} {% if chamada.MarcoPB == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoPB}}</td>
+                    {% endif %} {% if chamada.AbrilPB == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilPB}}</td>
+                    {% endif %} {% if chamada.MaioPB == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioPB}}</td>
+                    {% endif %} {% if chamada.JunhoPB == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoPB}}</td>
+                    {% endif %} {% if chamada.JulhoPB == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoPB}}</td>
+                    {% endif %} {% if chamada.AgostoPB == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoPB}}</td>
+                    {% endif %} {% if chamada.SetembroPB == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroPB}}</td>
+                    {% endif %} {% if chamada.OutubroPB == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroPB}}</td>
+                    {% endif %} {% if chamada.NovembroPB == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroPB}}</td>
+                    {% endif %} {% if chamadaDesembroPB == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroPB}}</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td>Leitura</td>
+                    {% if chamada.JaneiroLT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroLT}}</td>
+                    {% endif %} {% if chamada.FevereiroLT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroLT}}</td>
+                    {% endif %} {% if chamada.MarcoLT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoLT}}</td>
+                    {% endif %} {% if chamada.AbrilLT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilLT}}</td>
+                    {% endif %} {% if chamada.MaioLT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioLT}}</td>
+                    {% endif %} {% if chamada.JunhoLT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoLT}}</td>
+                    {% endif %} {% if chamada.JulhoLT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoLT}}</td>
+                    {% endif %} {% if chamada.AgostoLT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoLT}}</td>
+                    {% endif %} {% if chamada.SetembroLT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroLT}}</td>
+                    {% endif %} {% if chamada.OutubroLT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroLT}}</td>
+                    {% endif %} {% if chamada.NovembroLT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroLT}}</td>
+                    {% endif %} {% if chamadaDesembroLT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroLT}}</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td>Oficina de Redação</td>
+                    {% if chamada.JaneiroRD == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroRD}}</td>
+                    {% endif %} {% if chamada.FevereiroRD == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroRD}}</td>
+                    {% endif %} {% if chamada.MarcoRD == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoRD}}</td>
+                    {% endif %} {% if chamada.AbrilRD == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilRD}}</td>
+                    {% endif %} {% if chamada.MaioRD == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioRD}}</td>
+                    {% endif %} {% if chamada.JunhoRD == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoRD}}</td>
+                    {% endif %} {% if chamada.JulhoRD == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoRD}}</td>
+                    {% endif %} {% if chamada.AgostoRD == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoRD}}</td>
+                    {% endif %} {% if chamada.SetembroRD == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroRD}}</td>
+                    {% endif %} {% if chamada.OutubroRD == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroRD}}</td>
+                    {% endif %} {% if chamada.NovembroRD == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroRD}}</td>
+                    {% endif %} {% if chamadaDesembroRD == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroRD}}</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td>Gramática</td>
+                    {% if chamada.JaneiroGR == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroGR}}</td>
+                    {% endif %} {% if chamada.FevereiroGR == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroGR}}</td>
+                    {% endif %} {% if chamada.MarcoGR == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoGR}}</td>
+                    {% endif %} {% if chamada.AbrilGR == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilGR}}</td>
+                    {% endif %} {% if chamada.MaioGR == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioGR}}</td>
+                    {% endif %} {% if chamada.JunhoGR == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoGR}}</td>
+                    {% endif %} {% if chamada.JulhoGR == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoGR}}</td>
+                    {% endif %} {% if chamada.AgostoGR == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoGR}}</td>
+                    {% endif %} {% if chamada.SetembroGR == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroGR}}</td>
+                    {% endif %} {% if chamada.OutubroGR == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroGR}}</td>
+                    {% endif %} {% if chamada.NovembroGR == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroGR}}</td>
+                    {% endif %} {% if chamadaDesembroGR == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroGR}}</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td>Mat.Básica</td>
+                    {% if chamada.JaneiroMAT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroMAT}}</td>
+                    {% endif %} {% if chamada.FevereiroMAT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroMAT}}</td>
+                    {% endif %} {% if chamada.MarcoMAT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoMAT}}</td>
+                    {% endif %} {% if chamada.AbrilMAT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilMAT}}</td>
+                    {% endif %} {% if chamada.MaioMAT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioMAT}}</td>
+                    {% endif %} {% if chamada.JunhoMAT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoMAT}}</td>
+                    {% endif %} {% if chamada.JulhoMAT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoMAT}}</td>
+                    {% endif %} {% if chamada.AgostoMAT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoMAT}}</td>
+                    {% endif %} {% if chamada.SetembroMAT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroMAT}}</td>
+                    {% endif %} {% if chamada.OutubroMAT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroMAT}}</td>
+                    {% endif %} {% if chamada.NovembroMAT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroMAT}}</td>
+                    {% endif %} {% if chamadaDesembroMAT == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroMAT}}</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td>Geometria</td>
+                    {% if chamada.JaneiroGEM == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroGEM}}</td>
+                    {% endif %} {% if chamada.FevereiroGEM == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroGEM}}</td>
+                    {% endif %} {% if chamada.MarcoGEM == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoGEM}}</td>
+                    {% endif %} {% if chamada.AbrilGEM == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilGEM}}</td>
+                    {% endif %} {% if chamada.MaioGEM == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioGEM}}</td>
+                    {% endif %} {% if chamada.JunhoGEM == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoGEM}}</td>
+                    {% endif %} {% if chamada.JulhoGEM == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoGEM}}</td>
+                    {% endif %} {% if chamada.AgostoGEM == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoGEM}}</td>
+                    {% endif %} {% if chamada.SetembroGEM == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroGEM}}</td>
+                    {% endif %} {% if chamada.OutubroGEM == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroGEM}}</td>
+                    {% endif %} {% if chamada.NovembroGEM == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroGEM}}</td>
+                    {% endif %} {% if chamadaDesembroGEM == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroGEM}}</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td>Álgebra</td>
+                    {% if chamada.JaneiroALG == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroALG}}</td>
+                    {% endif %} {% if chamada.FevereiroALG == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroALG}}</td>
+                    {% endif %} {% if chamada.MarcoALG == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoALG}}</td>
+                    {% endif %} {% if chamada.AbrilALG == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilALG}}</td>
+                    {% endif %} {% if chamada.MaioALG == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioALG}}</td>
+                    {% endif %} {% if chamada.JunhoALG == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoALG}}</td>
+                    {% endif %} {% if chamada.JulhoALG == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoALG}}</td>
+                    {% endif %} {% if chamada.AgostoALG == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoALG}}</td>
+                    {% endif %} {% if chamada.SetembroALG == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroALG}}</td>
+                    {% endif %} {% if chamada.OutubroALG == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroALG}}</td>
+                    {% endif %} {% if chamada.NovembroALG == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroALG}}</td>
+                    {% endif %} {% if chamadaDesembroALG == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroALG}}</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td>Geografia</td>
+                    {% if chamada.JaneiroGEO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroGEO}}</td>
+                    {% endif %} {% if chamada.FevereiroGEO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroGEO}}</td>
+                    {% endif %} {% if chamada.MarcoGEO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoGEO}}</td>
+                    {% endif %} {% if chamada.AbrilGEO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilGEO}}</td>
+                    {% endif %} {% if chamada.MaioGEO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioGEO}}</td>
+                    {% endif %} {% if chamada.JunhoGEO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoGEO}}</td>
+                    {% endif %} {% if chamada.JulhoGEO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoGEO}}</td>
+                    {% endif %} {% if chamada.AgostoGEO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoGEO}}</td>
+                    {% endif %} {% if chamada.SetembroGEO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroGEO}}</td>
+                    {% endif %} {% if chamada.OutubroGEO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroGEO}}</td>
+                    {% endif %} {% if chamada.NovembroGEO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroGEO}}</td>
+                    {% endif %} {% if chamadaDesembroGEO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroGEO}}</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td>História</td>
+                    {% if chamada.JaneiroHIS == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroHIS}}</td>
+                    {% endif %} {% if chamada.FevereiroHIS == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroHIS}}</td>
+                    {% endif %} {% if chamada.MarcoHIS == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoHIS}}</td>
+                    {% endif %} {% if chamada.AbrilHIS == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilHIS}}</td>
+                    {% endif %} {% if chamada.MaioHIS == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioHIS}}</td>
+                    {% endif %} {% if chamada.JunhoHIS == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoHIS}}</td>
+                    {% endif %} {% if chamada.JulhoHIS == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoHIS}}</td>
+                    {% endif %} {% if chamada.AgostoHIS == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoHIS}}</td>
+                    {% endif %} {% if chamada.SetembroHIS == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroHIS}}</td>
+                    {% endif %} {% if chamada.OutubroHIS == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroHIS}}</td>
+                    {% endif %} {% if chamada.NovembroHIS == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroHIS}}</td>
+                    {% endif %} {% if chamadaDesembroHIS == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroHIS}}</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td>Biologia</td>
+                    {% if chamada.JaneiroBIO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroBIO}}</td>
+                    {% endif %} {% if chamada.FevereiroBIO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroBIO}}</td>
+                    {% endif %} {% if chamada.MarcoBIO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoBIO}}</td>
+                    {% endif %} {% if chamada.AbrilBIO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilBIO}}</td>
+                    {% endif %} {% if chamada.MaioBIO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioBIO}}</td>
+                    {% endif %} {% if chamada.JunhoBIO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoBIO}}</td>
+                    {% endif %} {% if chamada.JulhoBIO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoBIO}}</td>
+                    {% endif %} {% if chamada.AgostoBIO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoBIO}}</td>
+                    {% endif %} {% if chamada.SetembroBIO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroBIO}}</td>
+                    {% endif %} {% if chamada.OutubroBIO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroBIO}}</td>
+                    {% endif %} {% if chamada.NovembroBIO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroBIO}}</td>
+                    {% endif %} {% if chamadaDesembroBIO == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroBIO}}</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td>Quimica</td>
+                    {% if chamada.JaneiroQUI == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroQUI}}</td>
+                    {% endif %} {% if chamada.FevereiroQUI == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroQUI}}</td>
+                    {% endif %} {% if chamada.MarcoQUI == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoQUI}}</td>
+                    {% endif %} {% if chamada.AbrilQUI == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilQUI}}</td>
+                    {% endif %} {% if chamada.MaioQUI == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioQUI}}</td>
+                    {% endif %} {% if chamada.JunhoQUI == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoQUI}}</td>
+                    {% endif %} {% if chamada.JulhoQUI == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoQUI}}</td>
+                    {% endif %} {% if chamada.AgostoQUI == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoQUI}}</td>
+                    {% endif %} {% if chamada.SetembroQUI == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroQUI}}</td>
+                    {% endif %} {% if chamada.OutubroQUI == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroQUI}}</td>
+                    {% endif %} {% if chamada.NovembroQUI == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroQUI}}</td>
+                    {% endif %} {% if chamadaDesembroQUI == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroQUI}}</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td>Física</td>
+                    {% if chamada.JaneiroFSK == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroFSK}}</td>
+                    {% endif %} {% if chamada.FevereiroFSK == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroFSK}}</td>
+                    {% endif %} {% if chamada.MarcoFSK == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoFSK}}</td>
+                    {% endif %} {% if chamada.AbrilFSK == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilFSK}}</td>
+                    {% endif %} {% if chamada.MaioFSK == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioFSK}}</td>
+                    {% endif %} {% if chamada.JunhoFSK == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoFSK}}</td>
+                    {% endif %} {% if chamada.JulhoFSK == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoFSK}}</td>
+                    {% endif %} {% if chamada.AgostoFSK == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoFSK}}</td>
+                    {% endif %} {% if chamada.SetembroFSK == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroFSK}}</td>
+                    {% endif %} {% if chamada.OutubroFSK == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroFSK}}</td>
+                    {% endif %} {% if chamada.NovembroFSK == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroFSK}}</td>
+                    {% endif %} {% if chamadaDesembroFSK == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroFSK}}</td>
+                    {% endif %}
+                </tr>
+
+
+                <tr>
+                    <td>Filosofia</td>
+                    {% if chamada.JaneiroFIL == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroFIL}}</td>
+                    {% endif %} {% if chamada.FevereiroFIL == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroFIL}}</td>
+                    {% endif %} {% if chamada.MarcoFIL == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoFIL}}</td>
+                    {% endif %} {% if chamada.AbrilFIL == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilFIL}}</td>
+                    {% endif %} {% if chamada.MaioFIL == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioFIL}}</td>
+                    {% endif %} {% if chamada.JunhoFIL == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoFIL}}</td>
+                    {% endif %} {% if chamada.JulhoFIL == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoFIL}}</td>
+                    {% endif %} {% if chamada.AgostoFIL == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoFIL}}</td>
+                    {% endif %} {% if chamada.SetembroFIL == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroFIL}}</td>
+                    {% endif %} {% if chamada.OutubroFIL == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroFIL}}</td>
+                    {% endif %} {% if chamada.NovembroFIL == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroFIL}}</td>
+                    {% endif %} {% if chamadaDesembroFIL == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroFIL}}</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td>Sociologia</td>
+                    {% if chamada.JaneiroSOC == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroSOC}}</td>
+                    {% endif %} {% if chamada.FevereiroSOC == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroSOC}}</td>
+                    {% endif %} {% if chamada.MarcoSOC == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoSOC}}</td>
+                    {% endif %} {% if chamada.AbrilSOC == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilSOC}}</td>
+                    {% endif %} {% if chamada.MaioSOC == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioSOC}}</td>
+                    {% endif %} {% if chamada.JunhoSOC == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoSOC}}</td>
+                    {% endif %} {% if chamada.JulhoSOC == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoSOC}}</td>
+                    {% endif %} {% if chamada.AgostoSOC == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoSOC}}</td>
+                    {% endif %} {% if chamada.SetembroSOC == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroSOC}}</td>
+                    {% endif %} {% if chamada.OutubroSOC == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroSOC}}</td>
+                    {% endif %} {% if chamada.NovembroSOC == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroSOC}}</td>
+                    {% endif %} {% if chamadaDesembroSOC == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroSOC}}</td>
+                    {% endif %}
+                </tr>
+
+
+                <tr>
+                    <td>Ed.Física</td>
+                    {% if chamada.JaneiroEDF == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroEDF}}</td>
+                    {% endif %} {% if chamada.FevereiroEDF == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroEDF}}</td>
+                    {% endif %} {% if chamada.MarcoEDF == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoEDF}}</td>
+                    {% endif %} {% if chamada.AbrilEDF == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilEDF}}</td>
+                    {% endif %} {% if chamada.MaioEDF == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioEDF}}</td>
+                    {% endif %} {% if chamada.JunhoEDF == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoEDF}}</td>
+                    {% endif %} {% if chamada.JulhoEDF == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoEDF}}</td>
+                    {% endif %} {% if chamada.AgostoEDF == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoEDF}}</td>
+                    {% endif %} {% if chamada.SetembroEDF == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroEDF}}</td>
+                    {% endif %} {% if chamada.OutubroEDF == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroEDF}}</td>
+                    {% endif %} {% if chamada.NovembroEDF == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroEDF}}</td>
+                    {% endif %} {% if chamadaDesembroEDF == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroEDF}}</td>
+                    {% endif %}
+                </tr>
+
+
+                <tr>
+                    <td>Espanhol</td>
+                    {% if chamada.JaneiroESP == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroESP}}</td>
+                    {% endif %} {% if chamada.FevereiroESP == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroESP}}</td>
+                    {% endif %} {% if chamada.MarcoESP == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoESP}}</td>
+                    {% endif %} {% if chamada.AbrilESP == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilESP}}</td>
+                    {% endif %} {% if chamada.MaioESP == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioESP}}</td>
+                    {% endif %} {% if chamada.JunhoESP == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoESP}}</td>
+                    {% endif %} {% if chamada.JulhoESP == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoESP}}</td>
+                    {% endif %} {% if chamada.AgostoESP == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoESP}}</td>
+                    {% endif %} {% if chamada.SetembroESP == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroESP}}</td>
+                    {% endif %} {% if chamada.OutubroESP == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroESP}}</td>
+                    {% endif %} {% if chamada.NovembroESP == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroESP}}</td>
+                    {% endif %} {% if chamadaDesembroESP == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroESP}}</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <td>Inglês</td>
+                    {% if chamada.JaneiroING == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JaneiroING}}</td>
+                    {% endif %} {% if chamada.FevereiroING == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.FevereiroING}}</td>
+                    {% endif %} {% if chamada.MarcoING == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MarcoING}}</td>
+                    {% endif %} {% if chamada.AbrilING == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AbrilING}}</td>
+                    {% endif %} {% if chamada.MaioING == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.MaioING}}</td>
+                    {% endif %} {% if chamada.JunhoING == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JunhoING}}</td>
+                    {% endif %} {% if chamada.JulhoING == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.JulhoING}}</td>
+                    {% endif %} {% if chamada.AgostoING == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.AgostoING}}</td>
+                    {% endif %} {% if chamada.SetembroING == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.SetembroING}}</td>
+                    {% endif %} {% if chamada.OutubroING == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.OutubroING}}</td>
+                    {% endif %} {% if chamada.NovembroING == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.NovembroING}}</td>
+                    {% endif %} {% if chamadaDesembroING == null %}
+                    <td> </td>
+                    {% else %}
+                    <td>{{chamada.DesembroING}}</td>
+                    {% endif %} {% endfor %}
+                </tr>
+
+
+
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}

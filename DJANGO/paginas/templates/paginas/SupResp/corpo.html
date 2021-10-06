@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %} {% endblock %}
+        </title>
+        <meta charset="utf-8">
+        {% load static %}
+
+
+	<link rel="stylesheet" type="text/css" href="{% static 'paginas/css/bootstrap.min.css' %}"  />
+
+    <script type="text/javascript" src="{% static 'paginas/js/jquery-3.3.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'paginas/js/bootstrap.min.js' %}"></script>
+
+<!-- apartir daqui vai o mdb -->
+
+      <!-- Bootstrap core CSS -->
+
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+  <link href="{% static 'paginas/Mdb/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{% static 'paginas/Mdb/css/mdb.min.css' %}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{% static 'paginas/Mdb/css/style.css' %}" rel="stylesheet">
+
+      <!-- scripts mdb -->
+      <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{% static 'paginas/Mdb/js/jquery-3.3.1.min.js' %}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'paginas/Mdb/js/popper.min.js' %}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'paginas/Mdb/js/bootstrap.min.js'}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'paginas/Mdb/js/mdb.js'%}"></script>
+
+
+    </head>
+    <body>
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark unique-color-dark" style="height:100px;">
+
+            <img src="{% static 'paginas/20190603_084006_0000.png' %}" height="80" class="d-inline-block align-top"
+              alt="mdb logo"><p class="text-break">
+
+            <ul class="navbar-nav ml-auto nav-flex-icons" style="color: white;">
+              <li class="nav-item">
+                  {% for us2 in username %}
+                  Responsavel:
+                    {{us2.username.capitalize}}
+                  {% endfor %}
+              </li>
+
+
+            </ul>
+          </div>
+        </nav>
+
+
+
+
+  <!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark unique-color-dark">
+
+  <a class="navbar-brand" href="{% url 'inicioSupResp' %}">Inicio</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'adverSupResp' %}">Advertencias
+
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'chamadaSupResp' %}">Frequencia</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'notasSupResp' %}">Notas</a>
+      </li>
+
+
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fab fa-google-plus-g"></i>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <i class="fas fa-user"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+          <a class="dropdown-item" href="{% url 'dadosSupResp'%}">Dados Pessoais</a>
+
+          <a class="dropdown-item" href="{% url 'logout' %}"> <i class="fas fa-sign-out-alt"></i> Sair</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+{%  block conteudo %}{% endblock %}
+
+    <!-- Footer -->
+<footer class="page-footer font-small unique-color">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-12 py-5">
+          <div class="mb-5 flex-center">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+
+          </div>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="#">System Digital Identification</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>

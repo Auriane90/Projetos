@@ -1,0 +1,83 @@
+{% extends "paginas/Cadastro/corpoCadastro.html" %}
+
+{% block title %}SDI-Cadastro{% endblock %}
+
+{% block conteudo %}
+
+<script type="text/javascript">
+		$(function () {
+
+		  // Oculta as opções do segundo select:
+		  $("#t-shift option").hide();
+
+		  // Observa o evento change do primeiro select:
+		  $("#p-shift").on("change", function () {
+
+		    // Recupera o valor selecionado:
+		    let course = $("#p-shift").val();
+
+		    // Oculta as opções atuais:
+		    $("#t-shift option").hide();
+
+		    // Exibe as opções conforme a seleção:
+		    $("#t-shift option[data-course="+ course +"]").show();
+
+		  });
+
+		});
+	</script>
+
+<form method="post" action="{% url 'cdDados' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h1>Cadastro de Aluno</h1>
+    <div class="form-group col-sm-4">
+      <label id="lb-shift">Course</label>
+      <select id="p-shift" class="form-control" name="turma">
+        <option selected disabled>Turma</option>
+        <option value="1A">1A</option>
+        <option value="1B">1B</option>
+        <option value="1C">1C</option>
+        <option value="1D">1D</option>
+        <option value="2A">2A</option>
+        <option value="2B">2B</option>
+        <option value="2C">2C</option>
+        <option value="2D">2D</option>
+        <option value="3A">3A</option>
+        <option value="3B">3B</option>
+        <option value="3C">3C</option>
+        <option value="3D">3D</option>
+       </select>
+    </div>
+    <div class="form-group col-sm-4">
+      <label id="lb-shift">Aluno</label>
+      <select id="t-shift" class="form-control" name="idAluno">
+        <option selected disabled>Selecione</option>
+        {% for a in alunos %}
+        <option data-course="{{a.first_name}}" value="{{a.id}}">{{a.username}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <label>Nome</label>
+    {{ form.Nome }}
+     <label>Telefone</label>
+    {{ form.Telefone }}
+     <label>Idade</label>
+    {{ form.Idade }}
+     <label>CPF</label>
+    {{ form.CPF }}
+    <label>RG</label>
+    {{ form.RG }}
+    <label>NomeResponsavel</label>
+    {{ form.NomeResponsavel }}
+     <label>TelefoneResponsavel</label>
+    {{ form.TelefoneResponsavel }}
+     <label>CPF_Responsavel</label>
+    {{ form.CPF_Responsavel }}
+     <label>RG_Responsavel</label>
+    {{ form.RG_Responsavel }}
+    <label>Foto</label>
+    {{ form.Foto }}
+    <button type="submit">Cadastrar</button>
+</form>
+
+{% endblock %}

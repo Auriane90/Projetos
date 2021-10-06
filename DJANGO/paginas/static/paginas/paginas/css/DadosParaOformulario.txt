@@ -1,0 +1,35 @@
+<h2>Dados Pessoais</h2>
+    <label>Telefone</label>
+    {{ form7.Telefone }}
+    <label>Nome</label>
+    {{ form7.Nome }}
+    <label>Idade</label>
+    {{ form7.Idade }}
+    <label>CPF</label>
+    {{ form7.CPF }}
+    <label>RG</label>
+    {{ form7.RG }}
+    <label>NomeResponsavel</label>
+    {{ form7.NomeResponsavel }}
+    <label>TelefoneResponsavel</label>
+    {{ form7.TelefoneResponsavel }}
+    <label>CPF_Responsavel</label>
+    {{ form7.CPF_Responsavel }}
+    <label>RG_Responsavel</label>
+    {{ form7.RG_Responsavel }}
+    <label>Serie</label>
+    {{ form7.Serie }}
+    <label>Foto</label>
+    {{ form7.Foto }}<br><br>
+
+
+VIEW
+form = Userlogin(request.POST or None)
+    form2 = UserHorario(request.POST or None)
+    form3 = UserAdvertencia(request.POST or None)
+    form4 = UserFrequencia(request.POST or None)
+    form5 = UserNotas(request.POST or None)
+    form6 = UserConteudo(request.POST or None)
+    form7 = UserDados(request.POST, request.FILES)
+    context = {'form': form, 'form2': form2, 'form3': form3, 'form4': form4, 'form5': form5,
+               'form6': form6, 'form7': form7}

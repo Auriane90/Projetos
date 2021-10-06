@@ -1,0 +1,296 @@
+{% extends "paginas/Cadastro/corpoCadastro.html" %}
+
+{% block title %}SDI-Cadastro{% endblock %}
+
+{% block conteudo %}
+
+<script type="text/javascript">
+		$(function () {
+
+		  // Oculta as opções do segundo select:
+		  $("#t-shift option").hide();
+
+		  // Observa o evento change do primeiro select:
+		  $("#p-shift").on("change", function () {
+
+		    // Recupera o valor selecionado:
+		    let course = $("#p-shift").val();
+
+		    // Oculta as opções atuais:
+		    $("#t-shift option").hide();
+
+		    // Exibe as opções conforme a seleção:
+		    $("#t-shift option[data-course="+ course +"]").show();
+
+		  });
+
+		});
+	</script>
+
+<form method="post" action="{% url 'cdFrequencia' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group col-sm-4">
+      <label id="lb-shift">Course</label>
+      <select id="p-shift" class="form-control" name="turma">
+        <option selected disabled>Turma</option>
+        <option value="1A">1A</option>
+        <option value="1B">1B</option>
+        <option value="1C">1C</option>
+        <option value="1D">1D</option>
+        <option value="2A">2A</option>
+        <option value="2B">2B</option>
+        <option value="2C">2C</option>
+        <option value="2D">2D</option>
+        <option value="3A">3A</option>
+        <option value="3B">3B</option>
+        <option value="3C">3C</option>
+        <option value="3D">3D</option>
+       </select>
+    </div>
+    <div class="form-group col-sm-4">
+      <label id="lb-shift">Aluno</label>
+      <select id="t-shift" class="form-control" name="idAluno">
+        <option selected disabled>Selecione</option>
+        {% for a in alunos %}
+        <option data-course="{{a.first_name}}" value="{{a.id}}">{{a.username}}</option>
+        {% endfor %}
+      </select>
+    </div>
+<h2>Português Básico</h2>
+{{form.JaneiroPB}}
+{{form.FevereiroPB}}
+{{form.MarcoPB}}
+{{form.AbrilPB}}
+{{form.MaioPB}}
+{{form.JunhoPB}}
+{{form.JulhoPB}}
+{{form.AgostoPB}}
+{{form.SetembroPB}}
+{{form.OutubroPB}}
+{{form.NovembroPB}}
+{{form.DesembroPB}}
+<h2>Gramática</h2>
+{{form.JaneiroGR}}
+{{form.FevereiroGR}}
+{{form.MarcoGR}}
+{{form.AbrilGR}}
+{{form.MaioGR}}
+{{form.JunhoGR}}
+{{form.JulhoGR}}
+{{form.AgostoGR}}
+{{form.SetembroGR}}
+{{form.OutubroGR}}
+{{form.NovembroGR}}
+{{form.DesembroGR}}
+<h2>Redação</h2>
+{{form.JaneiroRD}}
+{{form.FevereiroRD}}
+{{form.MarcoRD}}
+{{form.AbrilRD}}
+{{form.MaioRD}}
+{{form.JunhoRD}}
+{{form.JulhoRD}}
+{{form.AgostoRD}}
+{{form.SetembroRD}}
+{{form.OutubroRD}}
+{{form.NovembroRD}}
+{{form.DesembroRD}}
+<h2>Leitura</h2>
+{{form.JaneiroLT}}
+{{form.FevereiroLT}}
+{{form.MarcoLT}}
+{{form.AbrilLT}}
+{{form.MaioLT}}
+{{form.JunhoLT}}
+{{form.JulhoLT}}
+{{form.AgostoLT}}
+{{form.SetembroLT}}
+{{form.OutubroLT}}
+{{form.NovembroLT}}
+{{form.DesembroLT}}
+<h2>Biologia</h2>
+{{form.JaneiroBIO}}
+{{form.FevereiroBIO}}
+{{form.MarcoBIO}}
+{{form.AbrilBIO}}
+{{form.MaioBIO}}
+{{form.JunhoBIO}}
+{{form.JulhoBIO}}
+{{form.AgostoBIO}}
+{{form.SetembroBIO}}
+{{form.OutubroBIO}}
+{{form.NovembroBIO}}
+{{form.DesembroBIO}}
+<h2>Educação Física</h2>
+
+{{form.JaneiroEDF}}
+{{form.FevereiroEDF}}
+{{form.MarcoEDF}}
+{{form.AbrilEDF}}
+{{form.MaioEDF}}
+{{form.JunhoEDF}}
+{{form.JulhoEDF}}
+{{form.AgostoEDF}}
+{{form.SetembroEDF}}
+{{form.OutubroEDF}}
+{{form.NovembroEDF}}
+{{form.DesembroEDF}}
+<h2>Filosofia</h2>
+
+{{form.JaneiroFIL}}
+{{form.FevereiroFIL}}
+{{form.MarcoFIL}}
+{{form.AbrilFIL}}
+{{form.MaioFIL}}
+{{form.JunhoFIL}}
+{{form.JulhoFIL}}
+{{form.AgostoFIL}}
+{{form.SetembroFIL}}
+{{form.OutubroFIL}}
+{{form.NovembroFIL}}
+{{form.DesembroFIL}}
+<h2>Física</h2>
+
+{{form.JaneiroFSK}}
+{{form.FevereiroFSK}}
+{{form.MarcoFSK}}
+{{form.AbrilFSK}}
+{{form.MaioFSK}}
+{{form.JunhoFSK}}
+{{form.JulhoFSK}}
+{{form.AgostoFSK}}
+{{form.SetembroFSK}}
+{{form.OutubroFSK}}
+{{form.NovembroFSK}}
+{{form.DesembroFSK}}
+<h2>Geografia</h2>
+
+{{form.JaneiroGEO}}
+{{form.FevereiroGEO}}
+{{form.MarcoGEO}}
+{{form.AbrilGEO}}
+{{form.MaioGEO}}
+{{form.JunhoGEO}}
+{{form.JulhoGEO}}
+{{form.AgostoGEO}}
+{{form.SetembroGEO}}
+{{form.OutubroGEO}}
+{{form.NovembroGEO}}
+{{form.DesembroGEO}}
+<h2>História</h2>
+
+{{form.JaneiroHIS}}
+{{form.FevereiroHIS}}
+{{form.MarcoHIS}}
+{{form.AbrilHIS}}
+{{form.MaioHIS}}
+{{form.JunhoHIS}}
+{{form.JulhoHIS}}
+{{form.AgostoHIS}}
+{{form.SetembroHIS}}
+{{form.OutubroHIS}}
+{{form.NovembroHIS}}
+{{form.DesembroHIS}}
+<h2>Inglês</h2>
+
+{{form.JaneiroING}}
+{{form.FevereiroING}}
+{{form.MarcoING}}
+{{form.AbrilING}}
+{{form.MaioING}}
+{{form.JunhoING}}
+{{form.JulhoING}}
+{{form.AgostoING}}
+{{form.SetembroING}}
+{{form.OutubroING}}
+{{form.NovembroING}}
+{{form.DesembroING}}
+<h2>Espanhol</h2>
+
+{{form.JaneiroESP}}
+{{form.FevereiroESP}}
+{{form.MarcoESP}}
+{{form.AbrilESP}}
+{{form.MaioESP}}
+{{form.JunhoESP}}
+{{form.JulhoESP}}
+{{form.AgostoESP}}
+{{form.SetembroESP}}
+{{form.OutubroESP}}
+{{form.NovembroESP}}
+{{form.DesembroESP}}
+<h2>Matemática</h2>
+
+{{form.JaneiroMAT}}
+{{form.FevereiroMAT}}
+{{form.MarcoMAT}}
+{{form.AbrilMAT}}
+{{form.MaioMAT}}
+{{form.JunhoMAT}}
+{{form.JulhoMAT}}
+{{form.AgostoMAT}}
+{{form.SetembroMAT}}
+{{form.OutubroMAT}}
+{{form.NovembroMAT}}
+{{form.DesembroMAT}}
+<h2>Geometria</h2>
+
+{{form.JaneiroGEM}}
+{{form.FevereiroGEM}}
+{{form.MarcoGEM}}
+{{form.AbrilGEM}}
+{{form.MaioGEM}}
+{{form.JunhoGEM}}
+{{form.JulhoGEM}}
+{{form.AgostoGEM}}
+{{form.SetembroGEM}}
+{{form.OutubroGEM}}
+{{form.NovembroGEM}}
+{{form.DesembroGEM}}
+<h2>Àlgebra</h2>
+
+{{form.JaneiroALG}}
+{{form.FevereiroALG}}
+{{form.MarcoALG}}
+{{form.AbrilALG}}
+{{form.MaioALG}}
+{{form.JunhoALG}}
+{{form.JulhoALG}}
+{{form.AgostoALG}}
+{{form.SetembroALG}}
+{{form.OutubroALG}}
+{{form.NovembroALG}}
+{{form.DesembroALG}}
+<h2>Química</h2>
+
+{{form.JaneiroQUI}}
+{{form.FevereiroQUI}}
+{{form.MarcoQUI}}
+{{form.AbrilQUI}}
+{{form.MaioQUI}}
+{{form.JunhoQUI}}
+{{form.JulhoQUI}}
+{{form.AgostoQUI}}
+{{form.SetembroQUI}}
+{{form.OutubroQUI}}
+{{form.NovembroQUI}}
+{{form.DesembroQUI}}
+<h2>Sociologia</h2>
+
+{{form.JaneiroSOC}}
+{{form.FevereiroSOC}}
+{{form.MarcoSOC}}
+{{form.AbrilSOC}}
+{{form.MaioSOC}}
+{{form.JunhoSOC}}
+{{form.JulhoSOC}}
+{{form.AgostoSOC}}
+{{form.SetembroSOC}}
+{{form.OutubroSOC}}
+{{form.NovembroSOC}}
+{{form.DesembroSOC}}
+    <input type="submit" value="Cadastrar">
+</form>
+
+
+{% endblock %}

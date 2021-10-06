@@ -1,0 +1,124 @@
+{% extends "paginas/Cadastro/corpoCadastro.html" %}
+
+{% block title %}SDI-Cadastro{% endblock %}
+
+{% block conteudo %}
+
+<form method="post" action="{% url 'cdHorario' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>Turma</label>
+    {{form.turma}}
+    <h2>Segunda</h2>
+    <label>1°</label>
+    {{form.primeiraAulaS}}
+    <label>2°</label>
+    {{form.segundaAulaS}}
+    <label>3°</label>
+    {{form.terceiraAulaS}}
+    <label>4°</label>
+    {{form.quartaAulaS}}
+    <label>5º</label>
+    {{form.quintaAulaS}}<br>
+    <label>6º</label>
+    {{form.sextaAulaS}}
+    <label>7°</label>
+    {{form.setimaAulaS}}
+    <label>8°</label>
+    {{form.oitavaAulaS}}
+    <label>9°</label>
+    {{form.nonaAulaS}}
+    <label>10°</label>
+    {{form.decimaAulaS}}
+
+    <h2>Terça</h2>
+    <label>1°</label>
+    {{form.primeiraAulaT}}
+    <label>2°</label>
+    {{form.segundaAulaT}}
+    <label>3°</label>
+    {{form.terceiraAulaT}}
+    <label>4°</label>
+    {{form.quartaAulaT}}
+    <label>5º</label>
+    {{form.quintaAulaT}}<br>
+    <label>6º</label>
+    {{form.sextaAulaT}}
+    <label>7°</label>
+    {{form.setimaAulaT}}
+    <label>8°</label>
+    {{form.oitavaAulaT}}
+    <label>9°</label>
+    {{form.nonaAulaT}}
+    <label>10°</label>
+    {{form.decimaAulaT}}
+
+    <h2>Quarta</h2>
+    <label>1°</label>
+    {{form.primeiraAulaQ}}
+    <label>2°</label>
+    {{form.segundaAulaQ}}
+    <label>3°</label>
+    {{form.terceiraAulaQ}}
+    <label>4°</label>
+    {{form.quartaAulaQ}}
+    <label>5º</label>
+    {{form.quintaAulaQ}}<br>
+    <label>6º</label>
+    {{form.sextaAulaQ}}
+    <label>7°</label>
+    {{form.setimaAulaQ}}
+    <label>8°</label>
+    {{form.oitavaAulaQ}}
+    <label>9°</label>
+    {{form.nonaAulaQ}}
+    <label>10°</label>
+    {{form.decimaAulaQ}}
+
+    <h2>Quinta</h2>
+    <label>1°</label>
+    {{form.primeiraAulaQUI}}
+    <label>2°</label>
+    {{form.segundaAulaQUI}}
+    <label>3°</label>
+    {{form.terceiraAulaQUI}}
+    <label>4°</label>
+    {{form.quartaAulaQUI}}
+    <label>5º</label>
+    {{form.quintaAulaQUI}}<br>
+    <label>6º</label>
+    {{form.sextaAulaQUI}}
+    <label>7°</label>
+    {{form.setimaAulaQUI}}
+    <label>8°</label>
+    {{form.oitavaAulaQUI}}
+    <label>9°</label>
+    {{form.nonaAulaQUI}}
+    <label>10°</label>
+    {{form.decimaAulaQUI}}
+
+    <h2>Sexta</h2>
+    <label>1°</label>
+    {{form.primeiraAulaSEX}}
+    <label>2°</label>
+    {{form.segundaAulaSEX}}
+    <label>3°</label>
+    {{form.terceiraAulaSEX}}
+    <label>4°</label>
+    {{form.quartaAulaSEX}}
+    <label>5º</label>
+    {{form.quintaAulaSEX}}<br>
+    <label>6º</label>
+    {{form.sextaAulaSEX}}
+    <label>7°</label>
+    {{form.setimaAulaSEX}}
+    <label>8°</label>
+    {{form.oitavaAulaSEX}}
+    <label>9°</label>
+    {{form.nonaAulaSEX}}
+    <label>10°</label>
+    {{form.decimaAulaSEX}}<br>
+
+    <input type="submit" value="Cadastrar">
+</form>
+
+{% endblock %}

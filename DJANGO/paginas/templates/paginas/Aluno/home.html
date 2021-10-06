@@ -1,0 +1,106 @@
+{% extends "paginas/Aluno/corpo.html" %} {% block title %}SDI-Inicio{% endblock %} {% block conteudo %}
+<br>
+<div class="container">
+
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Horario</th>
+                    <th>1º Aula</th>
+                    <th>2º Aula</th>
+                    <th>3º Aula</th>
+                    <th>4º Aula</th>
+                    <th>5º Aula</th>
+                    <th>6º Aula</th>
+                    <th>7º Aula</th>
+                    <th>8º Aula</th>
+                    <th>9º Aula</th>
+                    <th>10º Aula</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {% for horario in horarios %}
+                    <td>Segunda</td>
+                    <td>{{horario.primeiraAulaS}}</td>
+                    <td>{{horario.segundaAulaS}}</td>
+                    <td>{{horario.terceiraAulaS}}</td>
+                    <td>{{horario.quartaAulaS}}</td>
+                    <td>{{horario.quintaAulaS}}</td>
+                    <td>{{horario.sextaAulaS}}</td>
+                    <td>{{horario.setimaAulaS}}</td>
+                    <td>{{horario.oitavaAulaS}}</td>
+                    <td>{{horario.nonaAulaS}}</td>
+                    <td>{{horario.decimaAulaS}}</td>
+
+                </tr>
+
+                <tr>
+                    <td>Terça</td>
+                    <td>{{horario.primeiraAulaT}}</td>
+                    <td>{{horario.segundaAulaT}}</td>
+                    <td>{{horario.terceiraAulaT}}</td>
+                    <td>{{horario.quartaAulaT}}</td>
+                    <td>{{horario.quintaAulaT}}</td>
+                    <td>{{horario.sextaAulaT}}</td>
+                    <td>{{horario.setimaAulaT}}</td>
+                    <td>{{horario.oitavaAulaT}}</td>
+                    <td>{{horario.nonaAulaT}}</td>
+                    <td>{{horario.decimaAulaT}}</td>
+                </tr>
+
+                <tr>
+                    <td>Quarta</td>
+                    <td>{{horario.primeiraAulaQ}}</td>
+                    <td>{{horario.segundaAulaQ}}</td>
+                    <td>{{horario.terceiraAulaQ}}</td>
+                    <td>{{horario.quartaAulaQ}}</td>
+                    <td>{{horario.quintaAulaQ}}</td>
+                    <td>{{horario.sextaAulaQ}}</td>
+                    <td>{{horario.setimaAulaQ}}</td>
+                    <td>{{horario.oitavaAulaQ}}</td>
+                    <td>{{horario.nonaAulaQ}}</td>
+                    <td>{{horario.decimaAulaQ}}</td>
+                </tr>
+
+                <tr>
+                    <td>Quinta</td>
+                    <td>{{horario.primeiraAulaQUI}}</td>
+                    <td>{{horario.segundaAulaQUI}}</td>
+                    <td>{{horario.terceiraAulaQUI}}</td>
+                    <td>{{horario.quartaAulaQUI}}</td>
+                    <td>{{horario.quintaAulaQUI}}</td>
+                    <td>{{horario.sextaAulaQUI}}</td>
+                    <td>{{horario.setimaAulaQUI}}</td>
+                    <td>{{horario.oitavaAulaQUI}}</td>
+                    <td>{{horario.nonaAulaQUI}}</td>
+                    <td>{{horario.decimaAulaQUI}}</td>
+                </tr>
+
+                <tr>
+                    <td>Sexta</td>
+                    <td>{{horario.primeiraAulaSEX}}</td>
+                    <td>{{horario.segundaAulaSEX}}</td>
+                    <td>{{horario.terceiraAulaSEX}}</td>
+                    <td>{{horario.quartaAulaSEX}}</td>
+                    <td>{{horario.quintaAulaSEX}}</td>
+                    <td>{{horario.sextaAulaSEX}}</td>
+                    <td>{{horario.setimaAulaSEX}}</td>
+                    <td>{{horario.oitavaAulaSEX}}</td>
+                    <td>{{horario.nonaAulaSEX}}</td>
+                    <td>{{horario.decimaAulaSEX}}</td>
+                    {% endfor %}
+                </tr>
+
+
+
+
+            </tbody>
+
+        </table>
+    </div>
+</div>
+<br> {% endblock %}

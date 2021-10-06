@@ -1,0 +1,53 @@
+{% extends "paginas/Cadastro/corpoCadastro.html" %}
+
+{% block title %}SDI-Cadastro{% endblock %}
+
+{% block conteudo %}
+
+
+<center><form method="post" action="{% url 'cdConteudo' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <h2>Conteúdo</h2>
+    <label>Turma </label>
+    {{form.turma}} <br><br>
+    <label>PortuquesBasico </label>
+    {{form.PortuquesBasico}} <br><br>
+    <label>Gramatica </label>
+    {{form.Gramatica}}<br><br>
+    <label>Redacao </label>
+    {{form.Redacao}}<br><br>
+    <label>Leitura</label>
+    {{form.Leitura}}<br><br>
+    <label>Biologia</label>
+    {{form.Biologia}}<br><br>
+    <label>EducacaoFisica</label>
+    {{form.EducacaoFisica}}<br><br>
+    <label>Filosofia</label>
+    {{form.Filosofia}}<br><br>
+    <label>Fisica </label>
+    {{form.Fisica}}<br><br>
+    <label>Geografia</label>
+    {{form.Geografia}}<br><br>
+    <label>Historia</label>
+    {{form.Historia}}<br><br>
+    <label>Ingles</label>
+    {{form.Ingles}}<br><br>
+    <label>Espanhol</label>
+    {{form.Espanhol}}<br><br>
+    <label>MatematicaBasica</label>
+    {{form.MatematicaBasica}}<br><br>
+    <label>Geometria</label>
+    {{form.Geometria}}<br><br>
+    <label>Algebra</label>
+    {{form.Algebra}}<br><br>
+    <label>Quimica</label>
+    {{form.Quimica}}<br><br>
+    <label>Sociologia</label>
+    {{form.Sociologia}}<br><br>
+
+
+    <input type="submit" value="Cadastrar">
+</form></center>
+
+{% endblock %}

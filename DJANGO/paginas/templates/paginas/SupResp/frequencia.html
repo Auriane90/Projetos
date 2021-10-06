@@ -1,0 +1,1253 @@
+{% extends "paginas/SupResp/corpo.html" %}
+
+{% block title %}SDI-Frequência{% endblock %}
+
+{% block conteudo %}
+<br><br><center><h1>Frequência</h1></center>
+<!-- Grid row -->
+<div class="row accordion-gradient-bcg d-flex justify-content-center">
+
+  <!-- Grid column -->
+  <div class="col-md-10 col-xl-6 py-5">
+
+    <!--Accordion wrapper-->
+    <div class="accordion md-accordion accordion-2" id="accordionEx7" role="tablist"
+      aria-multiselectable="true">
+{% for n in teste %}
+    {% for a in n %}
+      <!-- Accordion card -->
+      <div class="card">
+
+        <!-- Card header -->
+        <div class="card-header blue-grey darken-4 z-depth-1 mb-1" role="tab" id="heading{{a.idAluno}}">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx7" href="#collapse{{a.idAluno}}"
+            aria-expanded="false" aria-controls="collapse{{a.idAluno}}">
+            <h5 class="mb-0 white-text text-uppercase font-thin">
+              {{a.idAluno}} <i class="fas fa-angle-down rotate-icon"></i>
+            </h5>
+          </a>
+        </div>
+
+        <!-- Card body -->
+        <div id="collapse{{a.idAluno}}" class="collapse" role="tabpanel" aria-labelledby="heading{{a.idAluno}}"
+          data-parent="#accordionEx7">
+          <div class="card-body mb-1 rgba-grey-light text-dark">
+            <div class="container">
+
+
+                <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Diciplina</th>
+                      <th>Janeiro</th>
+                      <th>Fevereiro</th>
+                      <th>Março</th>
+                      <th>Abril</th>
+                      <th>Maio</th>
+                      <th>Junho</th>
+                      <th>Julho</th>
+                      <th>Agosto</th>
+                      <th>Setembro</th>
+                      <th>Outubro</th>
+                      <th>Novembro</th>
+                      <th>Dezembro</th>
+
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Port.Básico</td>
+                      {% if a.JaneiroPB == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroPB}}</td>
+                      {% endif %}
+                      {% if a.FevereiroPB == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroPB}}</td>
+                      {% endif %}
+                      {% if a.MarcoPB == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoPB}}</td>
+                      {% endif %}
+                      {% if a.AbrilPB == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilPB}}</td>
+                      {% endif %}
+                      {% if a.MaioPB == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioPB}}</td>
+                      {% endif %}
+                      {% if a.JunhoPB == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoPB}}</td>
+                      {% endif %}
+                      {% if a.JulhoPB == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoPB}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoPB == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoPB}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroPB == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroPB}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroPB == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroPB}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroPB == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroPB}}</td>
+                      {% endif %}
+
+                      {% if aDesembroPB == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroPB}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Leitura</td>
+                      {% if a.JaneiroLT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroLT}}</td>
+                      {% endif %}
+                      {% if a.FevereiroLT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroLT}}</td>
+                      {% endif %}
+                      {% if a.MarcoLT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoLT}}</td>
+                      {% endif %}
+                      {% if a.AbrilLT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilLT}}</td>
+                      {% endif %}
+                      {% if a.MaioLT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioLT}}</td>
+                      {% endif %}
+                      {% if a.JunhoLT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoLT}}</td>
+                      {% endif %}
+                      {% if a.JulhoLT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoLT}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoLT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoLT}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroLT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroLT}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroLT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroLT}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroLT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroLT}}</td>
+                      {% endif %}
+
+                      {% if aDesembroLT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroLT}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Oficina de Redação</td>
+                      {% if a.JaneiroRD == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroRD}}</td>
+                      {% endif %}
+                      {% if a.FevereiroRD == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroRD}}</td>
+                      {% endif %}
+                      {% if a.MarcoRD == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoRD}}</td>
+                      {% endif %}
+                      {% if a.AbrilRD == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilRD}}</td>
+                      {% endif %}
+                      {% if a.MaioRD == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioRD}}</td>
+                      {% endif %}
+                      {% if a.JunhoRD == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoRD}}</td>
+                      {% endif %}
+                      {% if a.JulhoRD == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoRD}}</td>
+                      {% endif %}
+                      {% if a.AgostoRD == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoRD}}</td>
+                      {% endif %}
+                      {% if a.SetembroRD == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroRD}}</td>
+                      {% endif %}
+                      {% if a.OutubroRD == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroRD}}</td>
+                      {% endif %}
+                      {% if a.NovembroRD == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroRD}}</td>
+                      {% endif %}
+                      {% if aDesembroRD == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroRD}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Gramática</td>
+                      {% if a.JaneiroGR == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroGR}}</td>
+                      {% endif %}
+                      {% if a.FevereiroGR == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroGR}}</td>
+                      {% endif %}
+                      {% if a.MarcoGR == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoGR}}</td>
+                      {% endif %}
+                      {% if a.AbrilGR == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilGR}}</td>
+                      {% endif %}
+                      {% if a.MaioGR == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioGR}}</td>
+                      {% endif %}
+                      {% if a.JunhoGR == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoGR}}</td>
+                      {% endif %}
+                      {% if a.JulhoGR == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoGR}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoGR == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoGR}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroGR == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroGR}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroGR == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroGR}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroGR == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroGR}}</td>
+                      {% endif %}
+
+                      {% if aDesembroGR == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroGR}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Mat.Básica</td>
+                       {% if a.JaneiroMAT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroMAT}}</td>
+                      {% endif %}
+                      {% if a.FevereiroMAT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroMAT}}</td>
+                      {% endif %}
+                      {% if a.MarcoMAT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoMAT}}</td>
+                      {% endif %}
+                      {% if a.AbrilMAT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilMAT}}</td>
+                      {% endif %}
+                      {% if a.MaioMAT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioMAT}}</td>
+                      {% endif %}
+                      {% if a.JunhoMAT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoMAT}}</td>
+                      {% endif %}
+                      {% if a.JulhoMAT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoMAT}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoMAT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoMAT}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroMAT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroMAT}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroMAT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroMAT}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroMAT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroMAT}}</td>
+                      {% endif %}
+
+                      {% if aDesembroMAT == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroMAT}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Geometria</td>
+                      {% if a.JaneiroGEM == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroGEM}}</td>
+                      {% endif %}
+                      {% if a.FevereiroGEM == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroGEM}}</td>
+                      {% endif %}
+                      {% if a.MarcoGEM == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoGEM}}</td>
+                      {% endif %}
+                      {% if a.AbrilGEM == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilGEM}}</td>
+                      {% endif %}
+                      {% if a.MaioGEM == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioGEM}}</td>
+                      {% endif %}
+                      {% if a.JunhoGEM == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoGEM}}</td>
+                      {% endif %}
+                      {% if a.JulhoGEM == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoGEM}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoGEM == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoGEM}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroGEM == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroGEM}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroGEM == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroGEM}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroGEM == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroGEM}}</td>
+                      {% endif %}
+
+                      {% if aDesembroGEM == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroGEM}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Álgebra</td>
+                      {% if a.JaneiroALG == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroALG}}</td>
+                      {% endif %}
+                      {% if a.FevereiroALG == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroALG}}</td>
+                      {% endif %}
+                      {% if a.MarcoALG == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoALG}}</td>
+                      {% endif %}
+                      {% if a.AbrilALG == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilALG}}</td>
+                      {% endif %}
+                      {% if a.MaioALG == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioALG}}</td>
+                      {% endif %}
+                      {% if a.JunhoALG == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoALG}}</td>
+                      {% endif %}
+                      {% if a.JulhoALG == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoALG}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoALG == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoALG}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroALG == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroALG}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroALG == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroALG}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroALG == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroALG}}</td>
+                      {% endif %}
+
+                      {% if aDesembroALG == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroALG}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Geografia</td>
+                      {% if a.JaneiroGEO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroGEO}}</td>
+                      {% endif %}
+                      {% if a.FevereiroGEO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroGEO}}</td>
+                      {% endif %}
+                      {% if a.MarcoGEO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoGEO}}</td>
+                      {% endif %}
+                      {% if a.AbrilGEO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilGEO}}</td>
+                      {% endif %}
+                      {% if a.MaioGEO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioGEO}}</td>
+                      {% endif %}
+                      {% if a.JunhoGEO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoGEO}}</td>
+                      {% endif %}
+                      {% if a.JulhoGEO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoGEO}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoGEO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoGEO}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroGEO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroGEO}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroGEO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroGEO}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroGEO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroGEO}}</td>
+                      {% endif %}
+
+                      {% if aDesembroGEO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroGEO}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>História</td>
+                       {% if a.JaneiroHIS == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroHIS}}</td>
+                      {% endif %}
+                      {% if a.FevereiroHIS == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroHIS}}</td>
+                      {% endif %}
+                      {% if a.MarcoHIS == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoHIS}}</td>
+                      {% endif %}
+                      {% if a.AbrilHIS == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilHIS}}</td>
+                      {% endif %}
+                      {% if a.MaioHIS == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioHIS}}</td>
+                      {% endif %}
+                      {% if a.JunhoHIS == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoHIS}}</td>
+                      {% endif %}
+                      {% if a.JulhoHIS == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoHIS}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoHIS == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoHIS}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroHIS == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroHIS}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroHIS == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroHIS}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroHIS == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroHIS}}</td>
+                      {% endif %}
+
+                      {% if aDesembroHIS == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroHIS}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Biologia</td>
+                      {% if a.JaneiroBIO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroBIO}}</td>
+                      {% endif %}
+                      {% if a.FevereiroBIO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroBIO}}</td>
+                      {% endif %}
+                      {% if a.MarcoBIO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoBIO}}</td>
+                      {% endif %}
+                      {% if a.AbrilBIO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilBIO}}</td>
+                      {% endif %}
+                      {% if a.MaioBIO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioBIO}}</td>
+                      {% endif %}
+                      {% if a.JunhoBIO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoBIO}}</td>
+                      {% endif %}
+                      {% if a.JulhoBIO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoBIO}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoBIO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoBIO}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroBIO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroBIO}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroBIO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroBIO}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroBIO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroBIO}}</td>
+                      {% endif %}
+
+                      {% if aDesembroBIO == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroBIO}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Quimica</td>
+                      {% if a.JaneiroQUI == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroQUI}}</td>
+                      {% endif %}
+                      {% if a.FevereiroQUI == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroQUI}}</td>
+                      {% endif %}
+                      {% if a.MarcoQUI == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoQUI}}</td>
+                      {% endif %}
+                      {% if a.AbrilQUI == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilQUI}}</td>
+                      {% endif %}
+                      {% if a.MaioQUI == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioQUI}}</td>
+                      {% endif %}
+                      {% if a.JunhoQUI == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoQUI}}</td>
+                      {% endif %}
+                      {% if a.JulhoQUI == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoQUI}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoQUI == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoQUI}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroQUI == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroQUI}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroQUI == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroQUI}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroQUI == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroQUI}}</td>
+                      {% endif %}
+
+                      {% if aDesembroQUI == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroQUI}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Física</td>
+                       {% if a.JaneiroFSK == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroFSK}}</td>
+                      {% endif %}
+                      {% if a.FevereiroFSK == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroFSK}}</td>
+                      {% endif %}
+                      {% if a.MarcoFSK == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoFSK}}</td>
+                      {% endif %}
+                      {% if a.AbrilFSK == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilFSK}}</td>
+                      {% endif %}
+                      {% if a.MaioFSK == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioFSK}}</td>
+                      {% endif %}
+                      {% if a.JunhoFSK == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoFSK}}</td>
+                      {% endif %}
+                      {% if a.JulhoFSK == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoFSK}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoFSK == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoFSK}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroFSK == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroFSK}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroFSK == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroFSK}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroFSK == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroFSK}}</td>
+                      {% endif %}
+
+                      {% if aDesembroFSK == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroFSK}}</td>
+                      {% endif %}
+                    </tr>
+
+
+                    <tr>
+                      <td>Filosofia</td>
+                      {% if a.JaneiroFIL == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroFIL}}</td>
+                      {% endif %}
+                      {% if a.FevereiroFIL == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroFIL}}</td>
+                      {% endif %}
+                      {% if a.MarcoFIL == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoFIL}}</td>
+                      {% endif %}
+                      {% if a.AbrilFIL == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilFIL}}</td>
+                      {% endif %}
+                      {% if a.MaioFIL == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioFIL}}</td>
+                      {% endif %}
+                      {% if a.JunhoFIL == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoFIL}}</td>
+                      {% endif %}
+                      {% if a.JulhoFIL == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoFIL}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoFIL == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoFIL}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroFIL == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroFIL}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroFIL == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroFIL}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroFIL == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroFIL}}</td>
+                      {% endif %}
+
+                      {% if aDesembroFIL == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroFIL}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Sociologia</td>
+                      {% if a.JaneiroSOC == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroSOC}}</td>
+                      {% endif %}
+                      {% if a.FevereiroSOC == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroSOC}}</td>
+                      {% endif %}
+                      {% if a.MarcoSOC == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoSOC}}</td>
+                      {% endif %}
+                      {% if a.AbrilSOC == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilSOC}}</td>
+                      {% endif %}
+                      {% if a.MaioSOC == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioSOC}}</td>
+                      {% endif %}
+                      {% if a.JunhoSOC == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoSOC}}</td>
+                      {% endif %}
+                      {% if a.JulhoSOC == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoSOC}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoSOC == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoSOC}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroSOC == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroSOC}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroSOC == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroSOC}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroSOC == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroSOC}}</td>
+                      {% endif %}
+
+                      {% if aDesembroSOC == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroSOC}}</td>
+                      {% endif %}
+                    </tr>
+
+
+                    <tr>
+                      <td>Ed.Física</td>
+                       {% if a.JaneiroEDF == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroEDF}}</td>
+                      {% endif %}
+                      {% if a.FevereiroEDF == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroEDF}}</td>
+                      {% endif %}
+                      {% if a.MarcoEDF == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoEDF}}</td>
+                      {% endif %}
+                      {% if a.AbrilEDF == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilEDF}}</td>
+                      {% endif %}
+                      {% if a.MaioEDF == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioEDF}}</td>
+                      {% endif %}
+                      {% if a.JunhoEDF == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoEDF}}</td>
+                      {% endif %}
+                      {% if a.JulhoEDF == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoEDF}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoEDF == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoEDF}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroEDF == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroEDF}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroEDF == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroEDF}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroEDF == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroEDF}}</td>
+                      {% endif %}
+
+                      {% if aDesembroEDF == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroEDF}}</td>
+                      {% endif %}
+                    </tr>
+
+
+                    <tr>
+                      <td>Espanhol</td>
+                      {% if a.JaneiroESP == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroESP}}</td>
+                      {% endif %}
+                      {% if a.FevereiroESP == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroESP}}</td>
+                      {% endif %}
+                      {% if a.MarcoESP == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoESP}}</td>
+                      {% endif %}
+                      {% if a.AbrilESP == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilESP}}</td>
+                      {% endif %}
+                      {% if a.MaioESP == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioESP}}</td>
+                      {% endif %}
+                      {% if a.JunhoESP == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoESP}}</td>
+                      {% endif %}
+                      {% if a.JulhoESP == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoESP}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoESP == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoESP}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroESP == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroESP}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroESP == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroESP}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroESP == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroESP}}</td>
+                      {% endif %}
+
+                      {% if aDesembroESP == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroESP}}</td>
+                      {% endif %}
+                    </tr>
+
+                    <tr>
+                      <td>Inglês</td>
+                      {% if a.JaneiroING == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JaneiroING}}</td>
+                      {% endif %}
+                      {% if a.FevereiroING == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.FevereiroING}}</td>
+                      {% endif %}
+                      {% if a.MarcoING == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MarcoING}}</td>
+                      {% endif %}
+                      {% if a.AbrilING == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AbrilING}}</td>
+                      {% endif %}
+                      {% if a.MaioING == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.MaioING}}</td>
+                      {% endif %}
+                      {% if a.JunhoING == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JunhoING}}</td>
+                      {% endif %}
+                      {% if a.JulhoING == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.JulhoING}}</td>
+                      {% endif %}
+
+                      {% if a.AgostoING == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.AgostoING}}</td>
+                      {% endif %}
+
+                      {% if a.SetembroING == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.SetembroING}}</td>
+                      {% endif %}
+
+                      {% if a.OutubroING == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.OutubroING}}</td>
+                      {% endif %}
+
+                      {% if a.NovembroING == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.NovembroING}}</td>
+                      {% endif %}
+
+                      {% if aDesembroING == null %}
+                        <td> </td>
+                      {% else %}
+                        <td>{{a.DesembroING}}</td>
+                      {% endif %}
+                    </tr>
+
+
+
+                  </tbody>
+
+                </table>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </div>
+
+{% endfor %}
+{% endfor %}
+    </div>
+    <!--/.Accordion wrapper-->
+
+  </div>
+  <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+<br><br>
+{% endblock %}

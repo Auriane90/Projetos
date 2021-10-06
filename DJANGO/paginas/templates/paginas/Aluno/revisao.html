@@ -1,0 +1,154 @@
+{% extends "paginas/Aluno/corpo.html" %}
+
+{% block title %}SDI-Conteúdo{% endblock %}
+
+{% block conteudo %}
+
+
+<div class="container">
+
+
+<div class="table-responsive">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Diciplina</th>
+      <th>Exibir Arquivo</th>
+      <th>Download do Arquivo</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      {% for conteudos in conteudo %}
+      <td>Port.Básico</td>
+      <td><a href="http:{{conteudos.PortuquesBasico.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.PortuquesBasico.url}}" download="{{conteudos.PortuquesBasico.url}}">Download</a> </td>
+
+    </tr>
+
+    <tr>
+      <td>Leitura</td>
+      <td><a href="{{conteudos.Leitura.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Leitura.url}}" download="{{conteudos.Leitura.url}}">Download</a> </td>
+
+    </tr>
+
+    <tr>
+      <td>Oficina de Redação</td>
+      <td><a href="{{conteudos.Redacao.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Redacao.url}}" download="{{conteudos.Redacao.url}}">Download</a> </td>
+
+    </tr>
+
+    <tr>
+      <td>Gramática</td>
+      <td><a href="{{conteudos.Gramatica.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Gramatica.url}}" download="{{conteudos.Gramatica.url}}">Download</a> </td>
+
+    </tr>
+
+    <tr>
+      <td>Mat.Básica</td>
+      <td><a href="{{conteudos.MatematicaBasica.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.MatematicaBasica.url}}" download="{{conteudos.MatematicaBasica.url}}">Download</a> </td>
+
+    </tr>
+
+    <tr>
+      <td>Geometria</td>
+      <td><a href="{{conteudos.Geometria.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Geometria.url}}" download="{{conteudos.Geometria.url}}">Download</a> </td>
+
+    </tr>
+
+    <tr>
+      <td>Álgebra</td>
+      <td><a href="{{conteudos.Algebra.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Algebra.url}}" download="{{conteudos.Algebra.url}}">Download</a> </td>
+
+    </tr>
+
+    <tr>
+      <td>Geografia</td>
+      <td><a href="{{conteudos.Geografia.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Geografia.url}}" download="{{conteudos.Geografia.url}}">Download</a> </td>
+
+    </tr>
+
+    <tr>
+      <td>História</td>
+      <td><a href="{{conteudos.Historia.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Historia.url}}" download="{{conteudos.Historia.url}}">Download</a> </td>
+
+    </tr>
+
+    <tr>
+      <td>Biologia</td>
+      <td><a href="{{conteudos.Biologia.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Biologia.url}}" download="{{conteudos.Biologia.url}}">Download</a> </td>
+
+    </tr>
+
+    <tr>
+      <td>Quimica</td>
+      <td><a href="{{conteudos.Quimica.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Quimica.url}}" download="{{conteudos.Quimica.url}}">Download</a> </td>
+
+    </tr>
+
+    <tr>
+      <td>Física</td>
+      <td><a href="{{conteudos.Fisica.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Fisica.url}}" download="{{conteudos.Fisica.url}}">Download</a> </td>
+
+    </tr>
+
+
+    <tr>
+      <td>Filosofia</td>
+      <td><a href="{{conteudos.Filosofia.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Filosofia.url}}" download="{{conteudos.Filosofia.url}}">Download</a> </td>
+
+    </tr>
+
+    <tr>
+      <td>Sociologia</td>
+      <td><a href="{{conteudos.Sociologia.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Sociologia.url}}" download="{{conteudos.Sociologia.url}}">Download</a> </td>
+
+    </tr>
+
+
+    <tr>
+      <td>Ed.Física</td>
+      <td><a href="{{conteudos.EducacaoFisica.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.EducacaoFisica.url}}" download="{{conteudos.EducacaoFisica.url}}">Download</a> </td>
+    </tr>
+
+
+    <tr>
+      <td>Espanhol</td>
+      <td><a href="{{conteudos.Espanhol.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Espanhol.url}}" download="{{conteudos.Espanhol.url}}">Download</a> </td>
+
+    </tr>
+
+    <tr>
+      <td>Inglês</td>
+      <td><a href="{{conteudos.Ingles.url}}">Ver</a> </td>
+      <td><a href="{{conteudos.Ingles.url}}" download="{{conteudos.Ingles.url}}">Download</a> </td>
+      {% endfor %}
+    </tr>
+
+
+
+  </tbody>
+
+</table>
+    </div>
+  </div>
+
+
+
+{% endblock %}

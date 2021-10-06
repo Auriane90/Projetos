@@ -1,0 +1,76 @@
+{% extends "paginas/SupResp/corpo.html" %}
+
+{% block title %}SDI-Dados{% endblock %}
+
+{% block conteudo %}
+<br><br><center><h1>Dados Pessoais</h1></center>
+<!-- Grid row -->
+<div class="row accordion-gradient-bcg d-flex justify-content-center">
+
+  <!-- Grid column -->
+  <div class="col-md-10 col-xl-6 py-5">
+
+    <!--Accordion wrapper-->
+    <div class="accordion md-accordion accordion-2" id="accordionEx7" role="tablist"
+      aria-multiselectable="true">
+{% for n in teste %}
+    {% for a in n %}
+      <!-- Accordion card -->
+      <div class="card">
+
+        <!-- Card header -->
+        <div class="card-header blue-grey darken-4 z-depth-1 mb-1" role="tab" id="heading{{a.idAluno}}">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx7" href="#collapse{{a.idAluno}}"
+            aria-expanded="false" aria-controls="collapse{{a.idAluno}}">
+            <h5 class="mb-0 white-text text-uppercase font-thin">
+              {{a.idAluno}} <i class="fas fa-angle-down rotate-icon"></i>
+            </h5>
+          </a>
+        </div>
+
+        <!-- Card body -->
+        <div id="collapse{{a.idAluno}}" class="collapse" role="tabpanel" aria-labelledby="heading{{a.idAluno}}"
+          data-parent="#accordionEx7">
+          <div class="card-body mb-1 rgba-grey-light text-dark">
+            <center><div class="card" style="width: 18rem;">
+              <img src="{{a.Foto.url}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Dados Pessoais</h5>
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Nome: {{a.Nome}}</li>
+                <li class="list-group-item">Telefone: {{a.Telefone}}</li>
+                <li class="list-group-item">Rg: {{a.RG}}</li>
+                <li class="list-group-item">Cpf: {{a.CPF}}</li>
+                <li class="list-group-item">Idade: {{a.Idade}}</li>
+                <li class="list-group-item">Serie: {{a.Serie}}</li>
+                <li class="list-group-item">Rg: {{a.RG}}</li>
+                <li class="list-group-item">Cpf: {{a.CPF}}</li>
+                <li class="list-group-item">Nome Responsável: {{a.idAlunoResponsavel}}</li>
+                <li class="list-group-item">Cpf Responsavel: {{a.CPF_Responsavel}}</li>
+                <li class="list-group-item">Rg Responsavel: {{a.RG_Responsavel}}</li>
+                <li class="list-group-item">Serie: {{a.Serie}}</li>
+
+              </ul>
+             <!--  <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div> -->
+            </div></center>
+          </div>
+        </div>
+      </div>
+
+{% endfor %}
+{% endfor %}
+    </div>
+    <!--/.Accordion wrapper-->
+
+  </div>
+  <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+<br><br><br>
+{% endblock %}

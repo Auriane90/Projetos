@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post">
+    {% csrf_token %}
+    <label>Aluno: </label>
+    {{form.id_aluno}}
+    <div class="form-group col-sm-4">
+      <label id="lb-shift">Responsavel: </label>
+      <select class="form-control" name="id_resp">
+        <option selected disabled>Selecione</option>
+        {% for a in alunos %}
+        <option data-course="{{a.first_name}}" value="{{a.id}}">{{a.username}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <button>Cadastrar</button>
+</form>
+
+</body>
+</html>

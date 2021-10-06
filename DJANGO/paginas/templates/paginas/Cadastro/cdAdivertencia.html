@@ -1,0 +1,52 @@
+{% extends "paginas/Cadastro/corpoCadastro.html" %}
+
+{% block title %}SDI-Cadastro{% endblock %}
+
+{% block conteudo %}
+
+<
+<center><h1>Cadastro de advertencias</h1></center>
+<form method="post" action="{% url 'cdAdvertencia' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group col-sm-4">
+      <label id="lb-shift">Course</label>
+      <select id="p-shift" class="form-control" name="turma">
+        <option selected disabled>Turma</option>
+        <option value="1A">1A</option>
+        <option value="1B">1B</option>
+        <option value="1C">1C</option>
+        <option value="1D">1D</option>
+        <option value="2A">2A</option>
+        <option value="2B">2B</option>
+        <option value="2C">2C</option>
+        <option value="2D">2D</option>
+        <option value="3A">3A</option>
+        <option value="3B">3B</option>
+        <option value="3C">3C</option>
+        <option value="3D">3D</option>
+       </select>
+    </div>
+    <div class="form-group col-sm-4">
+      <label id="lb-shift">Aluno</label>
+      <select id="t-shift" class="form-control" name="idAluno">
+        <option selected disabled>Selecione</option>
+        {% for a in alunos %}
+        <option data-course="{{a.first_name}}" value="{{a.id}}">{{a.username}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <h2>Frequência</h2>
+    <label>Comum </label>
+    {{form.Comum}}
+    <label>Media </label>
+    {{form.Media}}
+    <label>Grave </label>
+    {{form.Grave}}
+
+
+
+    <input type="submit" value="Cadastrar">
+</form>
+
+
+{% endblock %}

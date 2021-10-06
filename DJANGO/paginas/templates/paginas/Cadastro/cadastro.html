@@ -1,0 +1,23 @@
+{% extends "paginas/Cadastro/corpoCadastro.html" %}
+
+{% block title %}SDI-Cadastro{% endblock %}
+
+{% block conteudo %}
+
+
+<center><h1>Cadastro de alunos</h1></center>
+<form method="post">
+    {% csrf_token %}
+        <label>Nome: </label>
+        {{form.username}}
+        <label>Senha: </label>
+        {{form.password}}
+        <label>Turma: </label>
+        {{form.first_name}}
+        <label>Situação: </label>
+        {{form.last_name}}
+
+        <input type="submit" value="Cadastrar">
+</form>
+
+{% endblock %}
